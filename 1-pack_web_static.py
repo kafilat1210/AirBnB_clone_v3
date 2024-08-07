@@ -18,5 +18,6 @@ def do_pack():
         file_name = "versions/web_static_{}.tgz".format(date)
         local("tar -cvzf {} web_static".format(file_name))
         return file_name
-    except:
-        return None
+    except Exception as e:
+		print(f"An error occured")
+		return None
